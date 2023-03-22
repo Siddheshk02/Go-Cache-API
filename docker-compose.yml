@@ -1,0 +1,14 @@
+version: '3.8'
+services:
+  app:
+    container_name: api-dev
+    image: api-dev
+    build:
+      context: .
+      dockerfile: DockerFile
+      target: development
+    ports:
+      - 8000:8000
+    volumes:
+      - .:/app
+  
